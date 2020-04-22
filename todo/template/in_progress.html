@@ -1,0 +1,19 @@
+<!-- <body> in in_progress.html  -->
+    <table>
+        <thead>
+            <tr>
+                <th>To-do 목록</th>
+                <th>완료했나요?</th>
+            </tr>
+        </thead>
+        {% for x in todos %}
+            {% if x.is_done == False %}
+                <thead>
+                    <tr>
+                        <th>{{ x.task }}</th>
+                        <th>{{ x.is_done }}</th>
+                    </tr>
+                </thead>
+            {% endif %}
+        {% endfor %}
+    </table>

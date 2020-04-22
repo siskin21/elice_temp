@@ -6,11 +6,11 @@
             <th>완료했나요?</th>
         </tr>
     </thead>
-    {% for todo in todos %}
+    {% for x in todos %}
     <thead>
         <tr>
-            <th>{{ todo.task }}</th>
-            <th>{{ todo.is_done }}</th>
+            <th>{{ x.task }}</th>
+            <th>{{ x.is_done }}</th>
         </tr>
     </thead>
     {% endfor %}

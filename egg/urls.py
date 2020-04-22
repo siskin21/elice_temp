@@ -18,10 +18,12 @@ from django.urls import path
 from home.views import home_view #home 폴더 안 views.py 파일의 home_view 함수를 불러 옴
 from home.views import quote_view
 from todo.views import todo_view
+from todo.views import in_progress_view
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', home_view), #호출한 url에 도메인 뒤 하위 폴더가 없을 때-> home_view를 실행 
     path('quote/', quote_view),
     path('todos/', todo_view, name='todos'),
+    path('todos/in_progress', in_progress_view, name='in progress')
 ]
